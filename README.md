@@ -2,15 +2,24 @@
 
 Based on raymer/angularHybrid
 https://github.com/raymer/angularHybrid
+
 by Jonathan Raymer
 https://github.com/raymer
 
-and hybrid helper module from Angular v4: Hybrid Upgrade Application https://hackernoon.com/angular-v4-hybrid-upgrade-application-73d5afba1e01
+and hybrid helper module from Angular v4: 
+
+Hybrid Upgrade Application https://hackernoon.com/angular-v4-hybrid-upgrade-application-73d5afba1e01
+
 https://github.com/dormd/angularjs-to-angular4
+
 by Dor Moshe
+
 https://github.com/dormd
+
 https://twitter.com/DorMoshe
+
 https://www.facebook.com/DorMoshe2
+
 ## Getting Started
 
 To get you started you can simply clone the `angularHybrid` repository and install the dependencies:
