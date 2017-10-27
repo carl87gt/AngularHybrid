@@ -1,0 +1,61 @@
+angular.module('myApp', [
+    'ngRoute'
+]);
+
+// Declare app level module which depends on views, and components
+angular
+    .module("myApp")
+    .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+
+        $routeProvider.when('/foo', {
+            templateUrl: './template/foo.template.html',
+            controller: 'FooController',
+            controllerAs: 'fooCtrl'
+        });
+
+    }]);
+
+angular
+    .module('myApp', [])
+    .directive('fooWidget', function() {
+        return {
+            restrict: 'E',
+            replace: false,
+            template: '<span>Hello from Foo Widget Directive - AngularJS 1.x</span>'
+        };
+    });
+
+angular
+    .module('myApp', [])
+    .controller('FooController', fooController);
+
+fooController.$inject = ['FooService', 'BarService'];
+
+function fooController(FooService, BarService) {
+    let vm = this;
+    vm.title = 'foo component - angular v1.x component';
+
+    vm.$onInit = function () {
+        console.log("Foo controller initializing");
+    };
+
+    vm.fooData = FooService.getData();
+
+    vm.barData = BarService.getData();
+
+}
+
+angular
+    .module('myApp')
+    .service('FooService', FooService);
+
+FooService.$inject = ['$q'];
+
+function FooService($q) {
+    let vm = this;
+    vm.getData = getData;
+
+    function getData() {
+        return 'hello from foo service - angularjs v1.x service';
+    }
+}
